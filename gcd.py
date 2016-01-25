@@ -19,3 +19,4 @@ def vikgcd(a, b):
     return a, i
 
 print(vikgcd(35, 25))
+

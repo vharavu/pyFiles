@@ -1,0 +1,25 @@
+python logParseSoc.py \
+-v $ALGLOGS/$RTL_DMVER/fgAlgTrkr70DscCrg.log \
+-c $ALGLOGS/jITech3Ah70DscCrgRslt.log
+
+python logParseSoc.py \
+-v $ALGLOGS/$RTL_DMVER/fgAlgTrkrMidCrgDsc.log \
+-c $ALGLOGS/jITech3AhMidCrgDscRslt.log
+
+python logParseSoc.py \
+-v $ALGLOGS/$RTL_DMVER/fgAlgTrkrDis.log \
+-c $ALGLOGS/jITech3AhDscRslt.log
+
+python algFlagsParse.py \
+-v $ALGLOGS/$RTL_DMVER/fgAlgTrkr70DscCrg.log \
+-c $ALGLOGS/jITech3Ah70DscCrgRslt.log
+
+python algFlagsParse.py \
+-v $ALGLOGS/$RTL_DMVER/fgAlgTrkrDis.log \
+-c $ALGLOGS/jITech3AhDscRslt.log
+
+
+
+
+
+

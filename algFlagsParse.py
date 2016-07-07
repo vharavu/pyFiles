@@ -13,13 +13,9 @@ import pandas as pd
 
 plt.close("all")
 parser = argparse.ArgumentParser(description="V vs C viz script to visualize rslt channel")
-parser.add_argument('-v', '--Vfile', help='RTL result file name', required=False, type=str)
-parser.add_argument('-c', '--Cfile', help='C result file name', required=False, type=str)
+parser.add_argument('-v', '--Vfile', help='RTL result file name', required=True, type=str)
+parser.add_argument('-c', '--Cfile', help='C result file name', required=True, type=str)
 args = parser.parse_args()
-
-'''Vfile = '/home/vikram/FG/algLogs/fgAlgTrkrDscWithGocEn.log'
-Cfile = '/home/vikram/FG/algLogs/jITech3AhDscRsltRnd.log'
-'''
 
 def parseV(nibble, posn):
     tempList = []
@@ -71,4 +67,8 @@ VmSocLTOtgThr = parseV(6, 0)
 do2Plot(7, VmSocLTOtgThr, "VmSocLTOtgThr", df.mSocLTOtgThr, "CmSocLTOtgThr")
 VmSocLTCrgReThr = parseV(5, 3)
 do2Plot(8, VmSocLTCrgReThr, "VmSocLTCrgReThr", df.mSocLTCrgReThr, "CmSocLTCrgReThr")
+
+ViBtLTCrgTrm0Thr = parseV(5, 2)
+do2Plot(9, ViBtLTCrgTrm0Thr, "ViBtLTCrgTrm0Thr", df.iBtLTCrgTrm0Th, "CiBtLTCrgTrm0Thr")
+
 plt.show()

@@ -49,12 +49,14 @@ def parseAndBuild(fileString, posn):
 
 plt.close("all")
 Cdf = pd.read_table(args.Cfile, delim_whitespace=True)
-Vdf = pd.read_table(args.Vfile, delim_whitespace=True)
+#Vdf = pd.read_table(args.Vfile, delim_whitespace=True)
+Vdf = pd.read_table(args.Vfile, sep='\t+')
 
-VsocLiteMon = parseAndBuild(args.Vfile, 4)
-CsocLiteMon = parseAndBuild(args.Cfile, 4)
-do2Plot(1, VsocLiteMon, "VsocLiteMon", CsocLiteMon, "CsocLiteMon")
-#do2Plot(5, Vdf.socLiteMon, "VsocLiteMon", Cdf.socLiteMon, "CsocLiteMon")
+#VsocLiteMon = parseAndBuild(args.Vfile, 4)
+#CsocLiteMon = parseAndBuild(args.Cfile, 4)
+#do2Plot(1, VsocLiteMon, "VsocLiteMon", CsocLiteMon, "CsocLiteMon")
+do2Plot(1, Vdf.socLiteMon, "VsocLiteMon", Cdf.socLiteMon, "CsocLiteMon")
+
 
 Vesr = parseAndBuild(args.Vfile, 3)
 Cesr = parseAndBuild(args.Cfile, 3)

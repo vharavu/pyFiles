@@ -56,7 +56,10 @@ Vdf = pd.read_table(args.Vfile, sep='\t+')
 #CsocLiteMon = parseAndBuild(args.Cfile, 4)
 #do2Plot(1, VsocLiteMon, "VsocLiteMon", CsocLiteMon, "CsocLiteMon")
 do2Plot(1, Vdf.socLiteMon, "VsocLiteMon", Cdf.socLiteMon, "CsocLiteMon")
-
+plt.figure(6)
+plt.plot(Vdf.socLiteMon, color="blue", linewidth=1, linestyle="-", label="VsocLiteMon")
+plt.plot(Cdf.socLiteMon, color="red", linewidth=2.5, linestyle=":", label="CsocLiteMon")
+plt.legend(loc='upper left', frameon=False)
 
 Vesr = parseAndBuild(args.Vfile, 3)
 Cesr = parseAndBuild(args.Cfile, 3)

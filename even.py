@@ -1,5 +1,6 @@
 __author__ = 'vikram'
-
+import pandas as pd
+import argparse
 
 def is_even(x):
     """
@@ -186,4 +187,14 @@ def median(nums):
         return numList[size/2]
     else:
         return (numList[size/2] + numList[(size - 1)/2])/2.0
-print median([1, 1, 2, 5, 4, 4])
+#print median([1, 1, 2, 5, 4, 4])
+
+parser = argparse.ArgumentParser(description="V vs C viz script to visualize rslt channel")
+parser.add_argument('-v', '--Vfile', help='RTL result file name', required=True, type=str)
+args = parser.parse_args()
+df = pd.read_table(args.Vfile, sep='\t+')
+print df.vBt16
+print df.iBt16
+print df.simTime
+print df.rslt_iBt16
+print df.socLiteMon

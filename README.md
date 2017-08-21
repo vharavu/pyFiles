@@ -1,3 +1,3 @@
 # pyFiles
-Started this repo to learn pythom. It then grew into a holder for viz tools for my work.
+Started this repo to learn python. It then grew into a holder for viz tools for my work.
 Using/learning matplotlib, numpy, pandas...

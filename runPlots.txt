@@ -17,3 +17,9 @@ python algFlagsParse.py \
 python algFlagsParse.py \
 -v $ALGLOGS/$RTL_DMVER/fgAlgTrkrDis.log \
 -c $ALGLOGS/jITech3AhDscRslt.log
+-------------------------------------------------------
+KKH
+python kkhViz.py -v fgAlgTrkrCrg.log -c jITech3Ah0CrgRslt.log
+python kkhViz.py -v fgAlgTrkrDsc.log -c jITech3AhDscRslt.log
+
+
